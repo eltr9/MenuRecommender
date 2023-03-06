@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MenuRecommender</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tv_question">Pls Answer the following Questions</string>
+    <string name="btn_post">POST</string>
+    <string name="btn_history">HISTORY</string>
+    <string name="btn_start">START</string>
+    <string name="etPost_recipe">レシピ名</string>
+    <string name="etPost_ingMain">主材料</string>
+    <string name="etIng1">材料1</string>
+    <string name="etIng2">材料2</string>
+    <string name="etIng3">材料3</string>
+    <string name="etIng4">材料4</string>
+    <string name="etIng5">材料5</string>
+</resourcesI
