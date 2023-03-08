@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -16,6 +18,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         View btn2 = findViewById(R.id.btn2);
         View btn3 = findViewById(R.id.btn3);
         View btn4 = findViewById(R.id.btn4);
+
+        ImageView ivCharacter = findViewById(R.id.ivCharacter);
+        TextView tvQ = findViewById(R.id.tvQuestion);
+
+        tvQ.setText("何食べたい？"); // TODO: 初期質問を指定
+
+
+
+
 
 
         btn1.setOnClickListener(this);
@@ -41,7 +52,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn = (Button)v;
         selectedStr = (String)(btn.getText());
 
+        //manager へ答えを渡す
         RecommendManager.manage(selectedButtonNum,selectedStr);
+        // TODO:managerから次の質問を取得
+
+        //質問を表示
+        showNextQ();
+
+
+    }
+
+    public void showNextQ(){
 
     }
 }
