@@ -1,8 +1,10 @@
-package com.webserva.wings.android.menurecommender;
+package com.webserva.wings.android.menurecommender.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.webserva.wings.android.menurecommender.R;
 
 public class HistoryActivity extends AppCompatActivity {
 

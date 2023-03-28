@@ -12,21 +12,16 @@
         android:theme="@style/Theme.MenuRecommender"
         tools:targetApi="31">
         <activity
-            android:name=".PostActivity"
+            android:name=".activity.PostActivity"
             android:exported="false" />
         <activity
-            android:name=".HistoryActivity"
+            android:name=".activity.HistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultActivity"
-            android:exported="false"
-            android:label="@string/title_activity_result"
-            android:theme="@style/Theme.MenuRecommender.NoActionBar" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".StartActivity"
+            android:name=".activity.StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

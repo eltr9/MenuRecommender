@@ -1,96 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
 
     <ImageView
         android:id="@+id/ivCharacter"
-        android:layout_width="209dp"
-        android:layout_height="323dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        android:layout_width="221dp"
+        android:layout_height="274dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/animal_kawauso"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_container_scrollView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157"
-        tools:srcCompat="@drawable/animal_kawauso" />
+        app:layout_constraintVertical_bias="0.572"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="155dp"
         android:layout_height="175dp"
+        android:layout_marginTop="88dp"
         android:text="@string/tv_question"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_container_scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toEndOf="@+id/ivCharacter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container_scrollView"
+        android:layout_width="409dp"
+        android:layout_height="107dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_container_buttonView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container_buttonView"
+        android:layout_width="409dp"
+        android:layout_height="174dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="125dp"
-        android:layout_height="55dp"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/btn4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+    </FrameLayout>
 
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="125dp"
-        android:layout_height="55dp"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/btn3"
-        app:layout_constraintEnd_toStartOf="@+id/btn1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
 
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="125dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="32dp"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn4"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btn4"
-        android:layout_width="125dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="32dp"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn3" />
 
-    <HorizontalScrollView
-        android:id="@+id/scView"
-        android:layout_width="367dp"
-        android:layout_height="95dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical" />
-    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
