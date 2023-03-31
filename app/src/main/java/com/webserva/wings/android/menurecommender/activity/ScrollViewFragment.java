@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.webserva.wings.android.menurecommender.model.DTO.Dish;
 import com.webserva.wings.android.menurecommender.model.RecommendManager;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 public class ScrollViewFragment extends Fragment {
 
     private RecommendManager rm;
+    public List<Dish> dishCandidates;
 
 
 
@@ -54,7 +57,14 @@ public class ScrollViewFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-      //  rm.getDishCandidates().observe(getViewLifecycleOwner(),candidates ->updateCandidateDisplay(candidates));
+        //LiveDataのオブザーバー(監視)を作成
+        final Observer<List<Dish>> candidatesObserver = dishes -> {
+            dishCandidates = dishes;
+            //todo スクロール画面に表示する
+        };
+        //QObserverを設定
+        rm.getDishCandidates().observe(getViewLifecycleOwner(),candidatesObserver);
+
     }
 
     public void updateCandidateDisplay(ArrayList<Dish> candidates){

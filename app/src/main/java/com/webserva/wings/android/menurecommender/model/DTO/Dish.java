@@ -1,13 +1,14 @@
 package com.webserva.wings.android.menurecommender.model.DTO;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Dish {
     private int dish_id;
     private String name;
     private String genre;
-    private ArrayList<String> ingredients;
-    private ArrayList<String> ingTypes;
+    private List<String> ingredients;
+    private List<String> ingTypes;
     static int weight;
     static int fat;
     static int salty;
@@ -40,7 +41,7 @@ public class Dish {
         this.genre = genre;
     }
 
-    public ArrayList<String> getIngredients() {
+    public List<String> getIngredients() {
         return ingredients;
     }
 
@@ -48,7 +49,7 @@ public class Dish {
         this.ingredients = ingredients;
     }
 
-    public ArrayList<String> getIngTypes() {
+    public List<String> getIngTypes() {
         return ingTypes;
     }
 
@@ -56,51 +57,51 @@ public class Dish {
         this.ingTypes = ingTypes;
     }
 
-    public static int getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public static void setWeight(int weight) {
+    public void setWeight(int weight) {
         Dish.weight = weight;
     }
 
-    public static int getFat() {
+    public int getFat() {
         return fat;
     }
 
-    public static void setFat(int fat) {
+    public void setFat(int fat) {
         Dish.fat = fat;
     }
 
-    public static int getSalty() {
+    public int getSalty() {
         return salty;
     }
 
-    public static void setSalty(int salty) {
+    public void setSalty(int salty) {
         Dish.salty = salty;
     }
 
-    public static int getSpicy() {
+    public int getSpicy() {
         return spicy;
     }
 
-    public static void setSpicy(int spicy) {
+    public void setSpicy(int spicy) {
         Dish.spicy = spicy;
     }
 
-    public static int getSweet() {
+    public int getSweet() {
         return sweet;
     }
 
-    public static void setSweet(int sweet) {
+    public void setSweet(int sweet) {
         Dish.sweet = sweet;
     }
 
-    public static int getDifficulty() {
+    public int getDifficulty() {
         return difficulty;
     }
 
-    public static void setDifficulty(int difficulty) {
+    public void setDifficulty(int difficulty) {
         Dish.difficulty = difficulty;
     }
 }

@@ -65,23 +65,32 @@ public class ButtonViewFragment extends Fragment {
             HashMap<String,Object> map = currentQ.getOrderMap1();
             rm.inputOrders(map);
             rm.setNextQ(map);
+            rm.CreateQueryStr();
+            rm.AddDishes();
+
         });
         btn2.setOnClickListener(v -> {
             HashMap<String,Object>  map = currentQ.getOrderMap2();
             rm.inputOrders(map);
             rm.setNextQ(map);
+            rm.CreateQueryStr();
+            rm.AddDishes();
         });
         btn3.setOnClickListener(v -> {
             if(currentQ.getOpLength() > 2){
                 HashMap<String,Object>  map = currentQ.getOrderMap3();
                 rm.inputOrders(map);
                 rm.setNextQ(map);
+                rm.CreateQueryStr();
+                rm.AddDishes();
             }
         });
         btn4.setOnClickListener(v -> {
             if(3 < currentQ.getOpLength()){
                 HashMap<String,Object>  map = currentQ.getOrderMap3();
                 rm.inputOrders(map);
+                rm.CreateQueryStr();
+                rm.AddDishes();
                 rm.setNextQ(map);
             }
         });
@@ -90,6 +99,8 @@ public class ButtonViewFragment extends Fragment {
                 HashMap<String,Object>  map = currentQ.getOrderMap3();
                 rm.inputOrders(map);
                 rm.setNextQ(map);
+                rm.CreateQueryStr();
+                rm.AddDishes();
             }
         });
         btn6.setOnClickListener(v -> {
@@ -97,6 +108,8 @@ public class ButtonViewFragment extends Fragment {
                 HashMap<String,Object>  map = currentQ.getOrderMap3();
                 rm.inputOrders(map);
                 rm.setNextQ(map);
+                rm.CreateQueryStr();
+                rm.AddDishes();
             }
         });
 

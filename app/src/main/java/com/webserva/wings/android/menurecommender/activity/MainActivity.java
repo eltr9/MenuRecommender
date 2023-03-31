@@ -16,10 +16,12 @@ import com.webserva.wings.android.menurecommender.model.Question;
 import com.webserva.wings.android.menurecommender.model.RecommendManager;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
     RecommendManager rm;
     Question currentQ;
+    List<String> dishCandidates;
 
 
 
@@ -32,12 +34,12 @@ public class MainActivity extends AppCompatActivity{
         currentQ = rm.getCurrentQ().getValue();
 
         //LiveDataのオブザーバーを追加
+         //currentQ
         final Observer<Question> QObserver = Q -> {
             currentQ = Q;
             ImageView ivCharacter = findViewById(R.id.ivCharacter);
             TextView tvQ = findViewById(R.id.tvQuestion);
             tvQ.setText(currentQ.getMainText());
-
         };
         rm.getCurrentQ().observe(this,QObserver);
 
